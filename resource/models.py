@@ -1,5 +1,3 @@
-from django.db import models
-
 # Create your models here.
 from django.db import models
 
@@ -33,13 +31,13 @@ DESG_TYPE_CHOICES = (
 )   
 
 class Resource(models.Model):
-		name = models.CharField(max_length=100)
-		type = models.CharField(max_length=100)
-		location = models.CharField(max_length=300,blank=True, null=True)
-		owning_dep = models.CharField(max_length=50) 
-		availability = models.BooleanField()
-		Add_information = models.CharField(max_length=500)
-		allocation_policy = models.CharField(max_length=6,choices=POLICY_CHOICES)
+      name = models.CharField(max_length=100)
+      type = models.CharField(max_length=100)
+      location = models.CharField(max_length=300,blank=True, null=True)
+      owning_dep = models.CharField(max_length=50) 
+      availability = models.BooleanField()
+      Add_information = models.CharField(max_length=500)
+      allocation_policy = models.CharField(max_length=6,choices=POLICY_CHOICES)
 
 
 class Booked_resource(models.Model):
